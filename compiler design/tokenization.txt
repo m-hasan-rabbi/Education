@@ -1,0 +1,32 @@
+#include<stdio.h>
+int main()
+{
+    char string[100],tokenstring[100];
+
+    gets(string);
+    puts(string);
+    int i,k=0;
+
+    for(i=0; string[i] != '\0' ; i++)
+    {
+        if(string[i] != ' ')
+        {
+            tokenstring[k]=string[i];
+            k++;
+        }
+
+        if(string[i] == ' ')
+        {
+            tokenstring[k]='\0';
+            puts(tokenstring);
+            k=0;
+        }
+
+    }
+    tokenstring[k]='\0';
+    puts(tokenstring);
+
+
+
+
+}
